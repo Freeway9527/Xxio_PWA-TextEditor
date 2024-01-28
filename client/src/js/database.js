@@ -17,7 +17,7 @@ export const putDb = async (content) => {
   console.log("put to database");
 
   // Open indexedDB database
-  const db = await initDB();
+  const db = await initdb();
 
   // Start a transaction in readwrite mode
   const tx = db.transaction("jate", "readwrite");
@@ -44,7 +44,7 @@ export const getDb = async () => {
   console.log("get from database");
 
    // Open indexedDB database
-  const db = await initDB();
+  const db = await initdb();
 
    // Start a transaction in readonly mode
   const tx = db.transaction("jate", "readonly");

@@ -1,11 +1,54 @@
-const butInstall = document.getElementById('buttonInstall');
+// Get a reference to the installation button
+const butInstall = document.getElementById("buttonInstall");
 
-// Logic for installing the PWA
-// TODO: Add an event handler to the `beforeinstallprompt` event
-window.addEventListener('beforeinstallprompt', (event) => {});
+// Function to handle the beforeinstallprompt event
+function handleBeforeInstallPrompt(event) {
+  // Store the triggered event
+  window.deferredPrompt = event;
 
-// TODO: Implement a click event handler on the `butInstall` element
-butInstall.addEventListener('click', async () => {});
+  // Show the installation button
+  toggleHiddenClass(butInstall, false);
+}
 
-// TODO: Add an handler for the `appinstalled` event
-window.addEventListener('appinstalled', (event) => {});
+// Function to handle the installation button click
+async function handleInstallButtonClick() {
+  const promptEvent = window.deferredPrompt;
+
+  if (!promptEvent) {
+    return;
+  }
+
+  // Show the installation prompt to the user
+  promptEvent.prompt();
+
+  // Wait for the user's choice to install or cancel
+  const choiceResult = await promptEvent.userChoice;
+
+  if (choiceResult.outcome === "accepted") {
+    console.log("User accepted the PWA installation");
+  } else {
+    console.log("User declined the PWA installation");
+  }
+
+  // Reset the deferred prompt variable
+  window.deferredPrompt = null;
+
+  // Hide the installation button
+  toggleHiddenClass(butInstall, true);
+}
+
+// Function to handle the appinstalled event
+function handleAppInstalledEvent() {
+  // Clear the prompt
+  window.deferredPrompt = null;
+}
+
+// Utility function to toggle the 'hidden' class of an element
+function toggleHiddenClass(element, isHidden) {
+  element.classList.toggle("hidden", isHidden);
+}
+
+// Add event listeners
+window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+butInstall.addEventListener("click", handleInstallButtonClick);
+window.addEventListener("appinstalled", handleAppInstalledEvent);
