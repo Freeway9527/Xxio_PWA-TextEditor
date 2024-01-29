@@ -26,7 +26,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore("jate");
 
  // Add the content to the object store 
-  const request = store.add({ id: 1, content });
+  const request = store.add({ content });
 
   try {
     // Wait for the transaction to complete
