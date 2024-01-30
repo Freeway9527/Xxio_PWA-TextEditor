@@ -17,6 +17,8 @@ Screen Shots:
 ![Alt text](images/JATE_SS_2.png)
 ![Alt text](images/JATE_SS_3.png)
 
+Icon when install onto your local computer
+![Alt text](images/JATE_SS_4.png)
 
 ## Table of Contents
 1. [Installation](#installation)
