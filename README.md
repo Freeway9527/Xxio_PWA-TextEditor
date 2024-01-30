@@ -6,14 +6,15 @@
 
 ## Description
 
+I was task with modifying a starter code provided by the U of M to enable the app to function offline, establishing a database for data storage, and provide users the ability to install the application onto their devices.
+
+
 Click on the link for deployed application on Render:
 [(PWA): Progressive Web Applications (PWA)](https://pwa-text-editor-hl3q.onrender.com)
 
 Screen Shots:
 ![Alt text](images/JATE_SS_1.png)
-
 ![Alt text](images/JATE_SS_2.png)
-
 ![Alt text](images/JATE_SS_3.png)
 
 
@@ -29,7 +30,7 @@ Screen Shots:
 ## Installation
 Make sure that you have Node.js install, if you do not have node.js, you can visit [Node.js website](https://nodejs.org/en).
 
-You will also need to add dependencies, in your terminal type in:
+In your terminal type in:
 
 ```
 npm install          
@@ -49,7 +50,9 @@ This will install all the dependencies in package.json files
 
 ## Usage
 
+From the terminal type in `npm run start` from the root of the directory. 
 
+Navaigate to the `client` folder expand it and click on `dist` folder , from `dist` you would want to located `index.html`, open it in your brower.
 
 ## Credit
 
