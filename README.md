@@ -6,7 +6,7 @@
 
 ## Description
 
-I was task with modifying a starter code provided by the U of M to enable the app to function offline, establishing a database for data storage, and provide users the ability to install the application onto their devices.
+I was tasked with modifying a starter code provided by the U of M to enable the app to function offline, establishing a database for data storage, and provide users the ability to install the application onto their devices.
 
 
 Click on the link for deployed application on Render:
@@ -18,6 +18,7 @@ Screen Shots:
 ![Alt text](images/JATE_SS_3.png)
 
 Icon when install onto your local computer
+
 ![Alt text](images/JATE_SS_4.png)
 
 ## Table of Contents
@@ -39,7 +40,6 @@ npm install
 ```
 This will install all the dependencies in package.json files
 
-
 ## Technologies
 
 <p align="center">
@@ -54,7 +54,9 @@ This will install all the dependencies in package.json files
 
 From the terminal type in `npm run start` from the root of the directory. 
 
-Navaigate to the `client` folder expand it and click on `dist` folder , from `dist` you would want to located `index.html`, open it in your brower.
+Navigate to the `client` folder expand it and click on `dist` folder , from `dist` you would want to located `index.html` and then open it in your brower.
+
+If you want to install the application onto your local computer. Hit the install button and when prompt to install the application, accept it.
 
 ## Credit
 
